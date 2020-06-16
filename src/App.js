@@ -13,7 +13,7 @@ import LandingPage from "./components/LandingPage";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 
-export default function App() { // new feature4
+export default function App() { // new PR
   const [darkMode, setDarkMode] = useState(false);
   const theme = createMuiTheme({
     root: {
