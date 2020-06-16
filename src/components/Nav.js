@@ -2,10 +2,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Tooltip, Typography } from "@material-ui/core";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Nav() {
+export default function Nav({ darkMode, setDarkMode }) {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color='inherit'>
       <Toolbar>
         <IconButton
           edge="start"
@@ -36,7 +36,15 @@ export default function Nav() {
         <Typography variant="h6" className={classes.title}>
           News
         </Typography>
-        <Button color="inherit">Login</Button>
+        <Tooltip title="toggle-darkMode">
+          <IconButton
+            aria-label="toggle-darkMode"
+            onClick={() => setDarkMode(!darkMode)}
+            color="inherit"
+          >
+            <Brightness4Icon />
+          </IconButton>
+        </Tooltip>
       </Toolbar>
     </AppBar>
   );
