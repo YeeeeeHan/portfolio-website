@@ -18,14 +18,14 @@ export default function App() { // new PR
   const theme = createMuiTheme({
     root: {
       minWidth: 275,
+      ".MuiSvgIcon-root": {
+        colorInherit: '#00ff0b'
+      }
     },
     bullet: {
       display: "inline-block",
       margin: "0 2px",
       transform: "scale(0.8)",
-    },
-    title: {
-      fontSize: 14,
     },
     pos: {
       marginBottom: 12,
@@ -53,9 +53,9 @@ export default function App() { // new PR
     <div>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Nav setDarkMode={setDarkMode} darkMode={darkMode} />
+        <Nav theme={theme} setDarkMode={setDarkMode} darkMode={darkMode} />
         <Swc>
-          <Route path="/" component={LandingPage} />
+          <Route path="/" exact component={LandingPage} />
           <Route path="/aboutme" component={AboutMe} />
           <Route path="/contact" component={Contact} />
           <Route path="/landingpage" component={LandingPage} />
