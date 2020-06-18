@@ -18,7 +18,7 @@ import TextField from "@material-ui/core/TextField";
 const useStyles = makeStyles((theme) => ({      // 1234
   outlinedRoot: {
     '&:hover $notchedOutline': {  // 12345
-      borderColor: 'green',
+      borderColor: 'green', // update A B C
     },
   },
   notchedOutline: {
