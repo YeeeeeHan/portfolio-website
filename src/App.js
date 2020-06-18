@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import { ThemeProvider } from "@material-ui/styles";
@@ -12,57 +13,38 @@ import Contact from "./components/Contact";
 import LandingPage from "./components/LandingPage";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
+import TextField from "@material-ui/core/TextField";
 
-export default function App() { // new PR
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = createMuiTheme({
-    root: {
-      minWidth: 275,
-      ".MuiSvgIcon-root": {
-        colorInherit: '#00ff0b'
-      }
+const useStyles = makeStyles((theme) => ({
+  outlinedRoot: {
+    '&:hover $notchedOutline': {
+      borderColor: 'green',
     },
-    bullet: {
-      display: "inline-block",
-      margin: "0 2px",
-      transform: "scale(0.8)",
-    },
-    pos: {
-      marginBottom: 12,
-    },
-    background: {
-      default: "#de1200",
-    },
-    palette: {
-      type: darkMode ? "dark" : "light",
-      primary: {
-        main: "#de1200",
-        light: "#7986cb",
-        dark: "#303f9f",
-      },
-      secondary: {
-        main: "#ee4b4b",
-      },
-      background: {
-        default: "#a0a0a5",
-      },
-    },
-  });
+  },
+  notchedOutline: {
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+  },
+}));
 
+export default function App() {
+  const classes = useStyles();
+  const InputProps = {
+    classes: {
+      root: classes.outlinedRoot,
+      notchedOutline: classes.notchedOutline,
+    },
+  };
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Nav theme={theme} setDarkMode={setDarkMode} darkMode={darkMode} />
-        <Swc>
-          <Route path="/" exact component={LandingPage} />
-          <Route path="/aboutme" component={AboutMe} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/landingpage" component={LandingPage} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/resume" component={Resume} />
-        </Swc>
-      </ThemeProvider>
-    </div>
+    <TextField
+      id="outlined-name"
+      label="Name"
+      className={classes.textField}
+      margin="normal"
+      variant="outlined"
+      InputProps={InputProps}
+      />
   );
 }
