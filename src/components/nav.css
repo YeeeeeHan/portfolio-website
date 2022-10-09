@@ -1,0 +1,36 @@
+.nav {
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+    font-family: 'Lato', sans-serif;
+    color: #777777;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.nav li.active {
+    background-color: #bebebe;
+}
+
+.nav li:hover {
+    background-color: #bebebe;
+}
