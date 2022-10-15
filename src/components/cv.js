@@ -9,7 +9,7 @@ export default function CV() {
     return (
         <div className="cv">
             <a href={Pdf}>
-                <Button variant="contained" style={{backgroundColor: "#999999"}} sx={{ boxShadow: 0 }} size="large">
+                <Button variant="contained" style={{backgroundColor: "#bebebe"}} sx={{ boxShadow: 0 }} size="sm">
                     <DownloadIcon/>
                     View Cv
                 </Button>

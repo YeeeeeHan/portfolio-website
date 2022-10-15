@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Signin from './components/signin.js'
 import Landing from './components/landing.js'
 import NavBar from "./components/nav";
 import React from "react";
 
 import About from "./components/about"
+import Portfolio from "./components/portfolio/portfolio"
 import {Route, Routes} from "react-router-dom"
 
 
@@ -17,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Landing/>}/>
                     <Route path="/about" element={<About/>}/>
+                    <Route path="/portfolio" element={<Portfolio/>}/>
                 </Routes>
             </div>
         </>
