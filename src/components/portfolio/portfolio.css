@@ -17,7 +17,8 @@
     letter-spacing: -1px;
     font-weight: 500;
     color: #555555;
-    margin-top: 50px;
+    margin-top: 25%;
+    /*margin-top: 50px;*/
 }
 
 .portfolio-grid {
@@ -36,9 +37,33 @@ a {
     padding: .25rem;
 }
 
+
 .portfolio-card-img {
     box-shadow: 10px 10px 5px #ccc;
     -moz-box-shadow: 10px 10px 5px #ccc;
     -webkit-box-shadow: 10px 10px 5px #ccc;
     -khtml-box-shadow: 10px 10px 5px #ccc;
+    height: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio-card-header {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        letter-spacing: -1px;
+        font-weight: 500;
+        color: #555555;
+        margin-top: 0%;
+        /*margin-top: 50px;*/
+    }
+
+    .portfolio-card-img {
+        box-shadow: 10px 10px 5px #ccc;
+        -moz-box-shadow: 10px 10px 5px #ccc;
+        -webkit-box-shadow: 10px 10px 5px #ccc;
+        -khtml-box-shadow: 10px 10px 5px #ccc;
+        height: 190px;
+    }
 }

@@ -38,13 +38,13 @@ export default function Portfolio() {
             <h1 className="portfolio-header">Blockchain Projects</h1>
             <Container maxWidth="lg" className="portfolio-grid">
                 <Grid container spacing={2}>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                         <RecipeReviewCard project={cardInfo.titanic}/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                         <RecipeReviewCard project={cardInfo.two}/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                         <RecipeReviewCard project={cardInfo.three}/>
                     </Grid>
                 </Grid>
@@ -52,7 +52,7 @@ export default function Portfolio() {
             <h1 className="portfolio-header">Personal Projects</h1>
             <Container maxWidth="lg" className="portfolio-grid">
                 <Grid container spacing={2}>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} md={4}>
                         <RecipeReviewCard project={cardInfo.four}/>
                     </Grid>
                 </Grid>
@@ -88,7 +88,8 @@ function RecipeReviewCard({project}) {
             <CardActions disableSpacing>
                 <BasicModal project={project} isExpanded={expanded} toggleExpanded={handleExpandClick}/>
                 <a href="https://github.com/YeeeeeHan" target="_blank">
-                    <Button variant="contained" style={{backgroundColor: "#f3f3f3", color: "#777777"}} sx={{boxShadow: 0}} size="small">
+                    <Button variant="contained" style={{backgroundColor: "#f3f3f3", color: "#777777"}}
+                            sx={{boxShadow: 0}} size="small">
                         <OpenInNewIcon/>
                         &nbsp;Demo
                     </Button>
@@ -112,12 +113,29 @@ function RecipeReviewCard({project}) {
 }
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 800,
-    height: 800,
+    position: {
+        md: 'absolute'
+    },
+    top: {
+        // xs: '50%',
+        md: '50%'
+    },
+    left: {
+        // xs: '50%',
+        md: '50%'
+    },
+    transform: {
+        xs: 'translate(0%, 25%)',
+        md: 'translate(-50%, -50%)',
+    },
+    width: {
+        // xs: 200,
+        md: 800
+    },
+    height: {
+        // xs: 200,
+        md: 800
+    },
     bgcolor: 'background.paper',
     boxShadow: 24,
     p: 4,
@@ -133,11 +151,11 @@ function BasicModal({project, isExpanded, toggleExpanded}) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <Grid container spacing={20}>
-                        <Grid item xs={4}>
-                            <img className="portfolio-card-img" src={project.image} height="150"/>
+                    <Grid container spacing={{xs: 0, md: 20}}>
+                        <Grid item xs={12} md={4} order={{xs: 2, md: 1}}>
+                            <img className="portfolio-card-img" src={project.image}/>
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6} order={{xs: 1, md: 2}}>
                             <h1 className="portfolio-card-header">{project.header}</h1>
                         </Grid>
                     </Grid>
@@ -145,12 +163,13 @@ function BasicModal({project, isExpanded, toggleExpanded}) {
                     <Card>
                         <CardHeader
                             action={
-                                    <a href="https://github.com/YeeeeeHan" target="_blank">
-                                        <Button variant="contained" style={{backgroundColor: "#f3f3f3", color: "#777777"}} sx={{boxShadow: 0}} size="small">
-                                            <OpenInNewIcon/>
-                                            &nbsp;Demo
-                                        </Button>
-                                    </a>
+                                <a href="https://github.com/YeeeeeHan" target="_blank">
+                                    <Button variant="contained" style={{backgroundColor: "#f3f3f3", color: "#777777"}}
+                                            sx={{boxShadow: 0}} size="small">
+                                        <OpenInNewIcon/>
+                                        &nbsp;Demo
+                                    </Button>
+                                </a>
                             }
                             title="Minority game that is created on the block chain"
                             subheader="September 14, 2016"
