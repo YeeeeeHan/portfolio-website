@@ -1,3 +1,7 @@
+.row {
+    margin-top: 10%;
+}
+
 .landing-header {
     background-color: #ffffff;
     display: flex;
@@ -8,6 +12,7 @@
     font-weight: 100;
     color: #777777;
     margin-bottom: 10px;
+    font-size: 50px;
 }
 
 .landing-subtitle {
@@ -33,3 +38,47 @@
     color: #777777;
 }
 
+.landing-img {
+    height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+    .landing-header {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        letter-spacing: -1px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        color: #777777;
+        font-size: 35px;
+    }
+
+    .landing-subtitle {
+        justify-content: center;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        color: #999999;
+    }
+
+    .landing-body {
+        justify-content: center;
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        color: #777777;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+    .landing-buttons {
+        justify-content: center;
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        color: #777777;
+    }
+
+    .landing-img {
+        height: 350px;
+    }
+}

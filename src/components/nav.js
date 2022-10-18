@@ -20,16 +20,21 @@ const drawerWidth = 240;
 const navItems = [
     {
         name: 'Github',
-        link: 'https://github.com/YeeeeeHan'
+        link: 'https://github.com/YeeeeeHan',
+        icon: <GitHubIcon/>
     },
     {
         name: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/limyeehan/'
+        link: 'https://www.linkedin.com/in/limyeehan/',
+        icon: <LinkedInIcon/>
     },
     {
         name: 'Twitter',
-        link: 'https://twitter.com/Yeeeeehan'
-    }];
+        link: 'https://twitter.com/Yeeeeehan',
+        icon: <TwitterIcon/>
+    }
+];
+
 
 export default function Navbar(props) {
     const {window} = props;
@@ -50,6 +55,7 @@ export default function Navbar(props) {
                     <ListItem key={idx} disablePadding>
                         <ListItemButton sx={{textAlign: 'center'}}>
                             <a href={item.link}>
+                                {item.icon}&nbsp;&nbsp;&nbsp;
                                 <ListItemText primary={item.name}/>
                             </a>
                         </ListItemButton>
@@ -59,7 +65,6 @@ export default function Navbar(props) {
         </Box>
     );
 
-    const container = window !== undefined ? () => window().document.body : undefined;
 
 
     return (
@@ -113,7 +118,7 @@ export default function Navbar(props) {
             </nav>
             <Box component="nav">
                 <Drawer
-                    container={container}
+                    anchor="right"
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}

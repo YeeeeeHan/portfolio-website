@@ -18,10 +18,9 @@ const bull = (
 export default function Landing() {
     return (
         <>
-            <br/><br/><br/><br/><br/><br/>
-            <Container maxWidth="lg">
-                <Grid container spacing={2}>
-                    <Grid item xs={8}>
+            <Container className="row" maxWidth="lg">
+                <Grid container spacing={2} columns={{ xs: 2, md: 8 }}>
+                    <Grid item xs={2} md={4} order={{ xs: 2, md: 1 }}>
                         <IntroductionCard/>
                         <p className="landing-body" style={{fontSize: 18}}>
                             Based in Singapore{bull}
@@ -40,8 +39,8 @@ export default function Landing() {
                         {/*    </Grid>*/}
                         {/*</Container>*/}
                     </Grid>
-                    <Grid item xs={4}>
-                        <img src={require('../documents/dp.JPG')} height="500"/>
+                    <Grid item xs={2} md={4} order={{ xs: 1, sm: 2 }}>
+                        <img className="landing-img" src={require('../documents/dp.JPG')}/>
                     </Grid>
                 </Grid>
             </Container>
@@ -52,13 +51,11 @@ export default function Landing() {
 export function IntroductionCard() {
     return (
         <>
-            {/*<Card sx={{minWidth: 275}}>*/}
-            <p className="landing-header" style={{fontSize: 50}}> Hi, I'm Yee Han.</p>
+            <p className="landing-header"> Hi, I'm Yee Han.</p>
             <Stack direction="row" justifyContent="center">
                 <p className="landing-subtitle" style={{fontSize: 18}}> Backend Engineer at TikTok</p>
                 <CV/>
             </Stack>
-            <br/><br/><br/>
             <p className="landing-body" style={{fontSize: 18}}>
                 I am a <strong>Software Engineer</strong> in the Video Architecture team at TikTok Singapore.
                 I graduated from Nanyang Technological University with a major in <strong> Computer Science</strong>.
