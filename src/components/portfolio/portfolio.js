@@ -96,7 +96,7 @@ function RecipeReviewCard({ project }) {
           isExpanded={expanded}
           toggleExpanded={handleExpandClick}
         />
-        <a href="https://github.com/YeeeeeHan" target="_blank">
+        <a href={project.website} target="_blank">
           <Button
             variant="contained"
             style={{ backgroundColor: "#f3f3f3", color: "#777777" }}
@@ -107,7 +107,7 @@ function RecipeReviewCard({ project }) {
             &nbsp;Demo
           </Button>
         </a>
-        <a href="https://github.com/YeeeeeHan" target="_blank">
+        <a href={project.github} target="_blank">
           <IconButton>
             <GitHubIcon />
           </IconButton>
@@ -176,7 +176,7 @@ function BasicModal({ project, isExpanded, toggleExpanded }) {
           <Card>
             <CardHeader
               action={
-                <a href="https://github.com/YeeeeeHan" target="_blank">
+                <a href={project.github} target="_blank">
                   <Button
                     variant="contained"
                     style={{ backgroundColor: "#f3f3f3", color: "#777777" }}

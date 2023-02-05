@@ -77,7 +77,7 @@ export default function Navbar(props) {
                 </Link>
                 <Box sx={{display: {sm: 'none'}}}>
                     <ul>
-                        <CustomLink to="/about">About</CustomLink>
+                        {/* <CustomLink to="/about">About</CustomLink> */}
                         <CustomLink to="/portfolio">Portfolio</CustomLink>
                         <li>
                             <a href="https://limyeehan.medium.com/">Medium</a>
@@ -93,7 +93,7 @@ export default function Navbar(props) {
                 </Box>
                 <Box sx={{display: {xs: 'none', sm: 'inline-block'}}}>
                     <ul>
-                        <CustomLink to="/about">About</CustomLink>
+                        {/* <CustomLink to="/about">About</CustomLink> */}
                         <CustomLink to="/portfolio">Portfolio</CustomLink>
                         <li>
                             <a href="https://limyeehan.medium.com/">Medium</a>
