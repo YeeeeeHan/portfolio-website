@@ -8,10 +8,9 @@ export const minorityGame = {
   image: minorityGamePic,
   header: "Minority Game",
   description:
-    "This impressive paella is a perfect party dish and a fun meal to cook\n" +
-    "together with your guests. Add 1 cup of frozen peas along with the mussels,\n" +
-    "if you like.\n",
-  modal: "LONG ASS TEXT",
+    "Fullstack app with solidity that allows people to wager on the outcome of questions.\n",
+  modal_text: "Modal text",
+  modal_description: "",
   github: "https://github.com/YeeeeeHan/minority-game-dapp-frontend",
   website: "https://minority-game-dapp-front-end.vercel.app/",
 };
@@ -19,49 +18,51 @@ export const minorityGame = {
 export const nftFloorPrice = {
   image: nftrackerPic,
   header: "NFTracker",
-  description:
-    "Imagine you a constructing a Lego twin tower, the left tower has 3 bricks and the right tower has 5 bricks. You have 3 extra bricks, how would you balance the 2 towers?",
-  modal: "22222",
-  github: "https://github.com/YeeeeeHan/minority-game-dapp-frontend",
-  website: "https://minority-game-dapp-front-end.vercel.app/",
+  description: "Telegram bot to track the floor price of NFTs on OpenSea. \n",
+  modal_text: "Modal text",
+  modal_description: "",
+  github: "https://github.com/YeeeeeHan/NFTracker",
+  website: "https://t.me/NFTracker_bot",
 };
 
 export const wallert = {
   image: wallertPic,
   header: "Wallert",
-  description:
-    "Web3 mobile gaming is going to be the future and DappStop is here to support that. We are very proud to have developed a 100% decentralized app store for the…",
-  modal: "3333",
-  github: "https://github.com/YeeeeeHan/minority-game-dapp-frontend",
-  website: "https://minority-game-dapp-front-end.vercel.app/",
+  description: "Telegram bot to notify users of wallet balance changes.\n",
+  modal_text: "Modal text",
+  modal_description: "",
+  github: "https://github.com/YeeeeeHan/wallert",
+  website: "https://t.me/wallert_tg_bot",
 };
 
 export const multisigWallet = {
   image: null,
   header: "Yield App",
-  description:
-    "Web3 mobile gaming is going to be the future and DappStop is here to support that. We are very proud to have developed a 100% decentralized app store for the…",
-  modal: "3333",
-  github: "https://github.com/YeeeeeHan/minority-game-dapp-frontend",
-  website: "https://minority-game-dapp-front-end.vercel.app/",
+  description: "__",
+  modal_text: "Modal text",
+  modal_description: "",
+  github: "",
+  website: "",
 };
 
 export const ntuFYP = {
   image: fypPic,
   header: "NTU Final Year Project",
   description:
-    "Web3 mobile gaming is going to be the future and DappStop is here to support that. We are very proud to have developed a 100% decentralized app store for the…",
-  modal: "3333",
-  github: "https://github.com/YeeeeeHan/minority-game-dapp-frontend",
+    "My NTU finanl project that generates a de-identified image of input faces.",
+  modal_text: "Modal text",
+  modal_description: "",
+  github: "",
   website: "https://minority-game-dapp-front-end.vercel.app/",
 };
 
 export const titanic = {
   image: one,
-  header: "Yield App",
+  header: "Titanic predictor",
   description:
-    "Web3 mobile gaming is going to be the future and DappStop is here to support that. We are very proud to have developed a 100% decentralized app store for the…",
-  modal: "3333",
-  github: "https://github.com/YeeeeeHan/minority-game-dapp-frontend",
-  website: "https://minority-game-dapp-front-end.vercel.app/",
+    "A simple machine learning model that predicts the survival of passengers on the titanic.",
+  modal_text: "Modal text",
+  modal_description: "",
+  github: "https://drive.google.com/file/d/1ejvr4lAqFRzVr788uYmcBCwPS9dGoDOt/view?usp=sharing",
+  website: "https://drive.google.com/file/d/1ejvr4lAqFRzVr788uYmcBCwPS9dGoDOt/view?usp=sharing",
 };
