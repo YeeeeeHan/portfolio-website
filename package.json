@@ -5,16 +5,17 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@google-pay/button-react": "^3.0.5",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.2",
     "@mui/x-data-grid": "^5.14.0",
+    "axios": "^1.1.3",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.0.2",
-    "react-scripts": "5.0.1",
-    "axios": "^1.1.3",
-    "concurrently": "^5.2.0",
-    "express": "^4.17.1"
+    "react-scripts": "5.0.1"
   },
   "browser": {
     "crypto": false,
@@ -48,7 +49,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "author": "Lim Yee Han",
   "license": "MIT"
 }

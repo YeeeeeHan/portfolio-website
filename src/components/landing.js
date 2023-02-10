@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { CardHeader, Container, Stack } from "@mui/material";
 import "./landing.css";
+import GooglePayButton from "@google-pay/button-react";
 
 const bull = (
   <Box
@@ -17,6 +18,46 @@ const bull = (
 export default function Landing() {
   return (
     <>
+      <GooglePayButton
+        environment="TEST"
+        paymentRequest={{
+          apiVersion: 2,
+          apiVersionMinor: 0,
+          allowedPaymentMethods: [
+            {
+              type: "CARD",
+              parameters: {
+                allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+                allowedCardNetworks: ["MASTERCARD", "VISA"],
+              },
+              tokenizationSpecification: {
+                type: "PAYMENT_GATEWAY",
+                parameters: {
+                  gateway: "example",
+                  gatewayMerchantId: "exampleGatewayMerchantId",
+                },
+              },
+            },
+          ],
+          merchantInfo: {
+            merchantId: "BCR2DN4TXKDLRMB2",
+            merchantName: "yh-business",
+          },
+          transactionInfo: {
+            totalPriceStatus: "FINAL",
+            totalPriceLabel: "Total",
+            totalPrice: "100.00",
+            currencyCode: "USD",
+            countryCode: "US",
+          },
+        }}
+        onLoadPaymentData={(
+          paymentRequest: google.payments.api.PaymentData
+        ) => {
+          console.log("load payment data", paymentRequest);
+          console.log("load payment data", paymentRequest.paymentMethodData);
+        }}
+      />
       <Container className="row" maxWidth="lg">
         <Grid container spacing={2} columns={{ xs: 2, md: 8 }}>
           <Grid item xs={2} md={4} order={{ xs: 2, md: 1 }}>
