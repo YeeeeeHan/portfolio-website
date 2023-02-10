@@ -19,7 +19,7 @@ export default function Landing() {
   return (
     <>
       <GooglePayButton
-        environment="TEST"
+        environment="PRODUCTION"
         paymentRequest={{
           apiVersion: 2,
           apiVersionMinor: 0,
@@ -46,9 +46,9 @@ export default function Landing() {
           transactionInfo: {
             totalPriceStatus: "FINAL",
             totalPriceLabel: "Total",
-            totalPrice: "100.00",
-            currencyCode: "USD",
-            countryCode: "US",
+            totalPrice: "1.00",
+            currencyCode: "SGD",
+            countryCode: "SG",
           },
         }}
         onLoadPaymentData={(
